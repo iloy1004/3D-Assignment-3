@@ -63,6 +63,13 @@
      <Compile Include="Assets\_Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
      <Compile Include="Assets\_Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
      <Compile Include="Assets\_Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\_Standard Assets\FPSEffects\Scripts\FPS_Effects\FPS_BulletImpacts.cs" />
+     <Compile Include="Assets\_Standard Assets\FPSEffects\Scripts\FPS_Effects\GlobalDefines.cs" />
+     <Compile Include="Assets\_Standard Assets\FPSEffects\Scripts\FPS_Effects\SelfDestruct.cs" />
+     <Compile Include="Assets\_Standard Assets\FPSEffects\Scripts\Game.cs" />
+     <Compile Include="Assets\_Standard Assets\FPSEffects\Scripts\controller.cs" />
+     <Compile Include="Assets\_Standard Assets\FPSEffects\Scripts\explode.cs" />
+     <Compile Include="Assets\_Standard Assets\FPSEffects\Scripts\explosion_light.cs" />
      <Compile Include="Assets\_Standard Assets\Utility\ActivateTrigger.cs" />
      <Compile Include="Assets\_Standard Assets\Utility\AutoMobileShaderSwitch.cs" />
      <Compile Include="Assets\_Standard Assets\Utility\AutoMoveAndRotate.cs" />
