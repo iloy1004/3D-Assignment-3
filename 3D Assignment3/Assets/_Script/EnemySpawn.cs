@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemySpawn : MonoBehaviour {
 
-	public int maxDino = 15;
+	public int maxDino = 7;
 	public int xMin = 100;
 	public int xMax = 420;
 	public int zMin = 80;
