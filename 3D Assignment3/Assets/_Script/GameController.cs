@@ -8,8 +8,10 @@ public class GameController : MonoBehaviour {
 	private int _scoreVal;
 	private int _liveVal;
 
-	[SerializeField]
-	private AudioSource _gameOverSound;
+	//[SerializeField]
+	//private AudioSource _gameOverSound;
+
+	private Vector3 _playerResetPos;
 
 	public int ScoreValue{
 		get{
@@ -44,12 +46,15 @@ public class GameController : MonoBehaviour {
 	public Text HighScoreLbl;
 	public Button RestartBtn;
 
-	public DinoController Dino;
-	public PlayerController Player;
+	public GameObject Dino;
+	public GameObject Player;
 
 	// Use this for initialization
 	void Start () {
 		this._initialize ();
+
+		Player.transform.position = this._playerResetPos;
+
 	}
 	
 	// Update is called once per frame
@@ -58,6 +63,9 @@ public class GameController : MonoBehaviour {
 	}
 
 	void _initialize(){
+
+		this._playerResetPos = new Vector3 (380f, 0f, 104f);
+
 		this.ScoreValue = 0;
 		this.LiveValue = 5;
 		this.GameOverLbl.gameObject.SetActive (false);
@@ -75,7 +83,7 @@ public class GameController : MonoBehaviour {
 		this.LiveLbl.gameObject.SetActive (false);
 		this.ScoreLbl.gameObject.SetActive (false);
 
-		this._gameOverSound.Play ();
+		//this._gameOverSound.Play ();
 	}
 
 	public void RestartBtnClick()
