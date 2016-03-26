@@ -7,7 +7,7 @@ public class DinoController : MonoBehaviour {
 
 	//public GameObject Dino;
 	public GameObject Player;
-
+	public GameController GameController;
 
 
 	public int MoveSpeedMax = 10;
@@ -36,7 +36,7 @@ public class DinoController : MonoBehaviour {
 		//_transform.LookAt(Player);
 
 		this._distance = Vector3.Distance (this._transform.position, Player.transform.position);
-		Debug.Log ("Distance: " + this._distance);
+		//Debug.Log ("Distance: " + this._distance);
 
 		if (this._distance >= this.ChaseDist) {
 			this._lookAt ();
@@ -50,7 +50,14 @@ public class DinoController : MonoBehaviour {
 			this._attack ();
 		}
 
+		if (this._distance <= 5) {
+			GameController.LiveValue -= 1;
+			Destroy (this.gameObject);
 
+			if (GameController.LiveValue <= 0) {
+				GameController._endGame ();
+			}
+		}
 
 	}
 

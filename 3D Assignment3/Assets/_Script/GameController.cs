@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour {
 			this._liveVal = value;
 
 			if (this._liveVal <= 0) {
-				
+				this._endGame ();
 			} else {
 				this.LiveLbl.text = "Lives: " + this._liveVal;
 			}
@@ -73,13 +73,13 @@ public class GameController : MonoBehaviour {
 		this.RestartBtn.gameObject.SetActive (false);
 	}
 
-	void _endGame(){
+	public void _endGame(){
 		this.GameOverLbl.gameObject.SetActive (true);
 		this.HighScoreLbl.gameObject.SetActive (true);
 		this.RestartBtn.gameObject.SetActive (true);
 
 		this.HighScoreLbl.text = "High Score: " + this._scoreVal;
-
+	
 		this.LiveLbl.gameObject.SetActive (false);
 		this.ScoreLbl.gameObject.SetActive (false);
 
